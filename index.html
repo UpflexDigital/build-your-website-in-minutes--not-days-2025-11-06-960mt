@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build Your Website in Minutes, Not Days with our AI-powered website builder. No code required, fast loading, and custom designs.">
+    <meta name="keywords" content="website builder, AI website builder, no code, web design, website creation">
+    <meta name="author" content="Upflex Digital">
+    <meta property="og:title" content="Build Your Website in Minutes - Upflex Digital">
+    <meta property="og:description" content="Best AI Website Builder, No Code Required">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://upflexdigital.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Build Your Website in Minutes - AI Website Builder | Upflex Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .button-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Upflex
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Home</a>
+                    <a href="#features" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Features</a>
+                    <a href="#benefits" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Benefits</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white text-sm font-medium">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Testimonials</a>
+                    <a href="#faq" class="nav-link text-gray-300 hover:text-white text-sm font-medium">FAQ</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+                </nav>
+                
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:block">
+                    <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="button-hover bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold text-sm">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden focus:outline-none" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl text-white"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-menu md:hidden bg-gray-800 border-t border-gray-700">
+                <nav class="flex flex-col space-y-4 px-4 py-6">
+                    <a href="#home" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">Home</a>
+                    <a href="#features" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">Features</a>
+                    <a href="#benefits" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">Benefits</a>
+                    <a href="#about" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">About</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">Testimonials</a>
+                    <a href="#faq" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">FAQ</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white text-sm font-medium" onclick="toggleMobileMenu()">Contact</a>
+                    <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="button-hover bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold text-sm text-center" onclick="toggleMobileMenu()">
+                        Get Started
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1080&fit=crop" alt="Hero background" class="w-full h-full object-cover opacity-25">
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 z-10 gradient-overlay"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                    Build Your Website in Minutes, Not Days
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Best AI Website Builder, No Code Required
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                    <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="button-hover bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl">
+                        Start Building Now
+                    </a>
+                    <a href="#features" class="button-hover border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    Powerful Features
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Everything you need to create a stunning website without writing a single line of code
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Feature 1: Fast Loading -->
+                <div class="feature-card hover-scale bg-gray-800 border border-gray-700 rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:border-cyan-500">
+                    <div class="mb-6">
+                        <div class="feature-icon inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
+                            <i class="fas fa-bolt text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Fast Loading</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Lightning-fast page speeds that keep your visitors engaged. Our optimized infrastructure ensures your website loads in milliseconds, improving user experience and SEO rankings.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: Custom Design -->
+                <div class="feature-card hover-scale bg-gray-800 border border-gray-700 rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:border-cyan-500">
+                    <div class="mb-6">
+                        <div class="feature-icon inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
+                            <i class="fas fa-palette text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Custom Design</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Fully customizable templates that match your brand identity. Choose from hundreds of professionally designed themes or create your own unique look with our intuitive drag-and-drop editor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    Why Choose Us
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Discover the benefits that make us the preferred choice for thousands of businesses
+                </p>
+            </div>
+            
+            <!-- Benefit 1: Save Time -->
+            <div class="mb-16 flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Save Time" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-hourglass-end text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Save Time</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Stop wasting weeks on development. Build a professional website in minutes with our AI-powered builder. Our intelligent templates and automation features eliminate repetitive tasks, allowing you to focus on what matters most—your business.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Pre-built templates ready to use
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Instant deployment and publishing
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            No technical knowledge required
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Benefit 2: Increase Sales -->
+            <div class="mb-16 flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1553531088-189a835cf17f?w=600&h=400&fit=crop" alt="Increase Sales" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Increase Sales</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Convert more visitors into customers with our conversion-optimized designs. Built-in analytics and A/B testing tools help you understand your audience better and make data-driven decisions to maximize revenue.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Conversion-optimized layouts
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Integrated payment processing
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Advanced analytics dashboard
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Benefit 3: Better ROI -->
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Better ROI" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-coins text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Better ROI</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Maximize your investment with affordable pricing and transparent billing. Our all-in-one platform eliminates the need for multiple tools and expensive developers, delivering exceptional value for your money.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            Affordable pricing plans
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            No hidden fees or surprises
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-cyan-400 mr-3"></i>
+                            24/7 customer support included
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-24 bg-gray-800 bg-opacity-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    See It In Action
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Watch how easy it is to build your website with our AI-powered builder
+                </p>
+            </div>
+            
+            <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/zVqQiBb0F-w?rel=0&modestbranding=1" allowfullscreen="" loading="lazy" title="Website Builder Demo"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    About Upflex Digital
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Company History -->
+                <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4">Our Story</h3>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Founded in 2018, Upflex Digital emerged from a simple observation: building a professional website shouldn't require coding knowledge or expensive developers. Our team of experienced designers, developers, and entrepreneurs came together with a mission to democratize web design. Starting with a small team of five passionate individuals, we've grown to serve thousands of businesses worldwide. Our journey has been defined by continuous innovation, unwavering commitment to our users, and a deep understanding of the challenges entrepreneurs face when establishing their online presence.
+                    </p>
+                </div>
+                
+                <!-- Company Mission -->
+                <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        We believe that every business, regardless of size or budget, deserves a stunning online presence. Our mission is to empower entrepreneurs and small business owners with intuitive, affordable tools that enable them to build professional websites without technical barriers. We're committed to fostering innovation, supporting our community, and continuously improving our platform to meet the evolving needs of the modern web. Through our dedication to excellence and customer success, we're reshaping the way people think about web design and digital presence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    What Our Clients Say
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Join thousands of satisfied customers who have transformed their online presence
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-900 rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-lg font-bold">Sarah Mitchell</p>
+                            <p class="text-gray-400 text-sm">Founder, Creative Studios</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Upflex Digital completely transformed how I approach web design. What used to take me weeks now takes just hours. The AI-powered suggestions have helped me create better designs, and my clients are absolutely thrilled with the results. My conversion rates have increased by 40% since switching!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-900 rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-lg font-bold">Marcus Johnson</p>
+                            <p class="text-gray-400 text-sm">CEO, Tech Startup Inc</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "As a non-technical founder, I was intimidated by website builders. Upflex made it so simple that I launched my site in under an hour. The platform's intuitive interface and helpful support team answered all my questions. Best investment I've made for my business!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-900 rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-lg font-bold">Emma Rodriguez</p>
+                            <p class="text-gray-400 text-sm">Marketing Director, Fashion Brand</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "The analytics dashboard is incredible. I can see exactly how visitors interact with my site and make data-driven improvements. The built-in SEO tools have boosted my organic traffic significantly. Upflex is worth every penny!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-gray-900 rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-lg font-bold">David Chen</p>
+                            <p class="text-gray-400 text-sm">Owner, Local Consulting Firm</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "I've tried multiple website builders, and Upflex is by far the best. The customer support team goes above and beyond to help you succeed. My website loads incredibly fast, looks professional, and has already generated qualified leads for my business."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Find answers to common questions about our platform
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
+                        <h3 class="text-lg font-bold text-white">Do I need any coding or design experience to use Upflex Digital?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6">
+                        <p class="text-gray-400 leading-relaxed">
+                            Absolutely not! Upflex Digital is designed specifically for people without technical or design experience. Our intuitive drag-and-drop editor makes it easy for anyone to create a professional website. We provide step-by-step tutorials, pre-built templates, and 24/7 customer support to help you every step of the way. Even if you've never built a website before, you'll be able to create something amazing in minutes.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
+                        <h3 class="text-lg font-bold text-white">What kind of websites can I build with Upflex?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6">
+                        <p class="text-gray-400 leading-relaxed">
+                            You can build virtually any type of website! Our platform supports portfolios, blogs, e-commerce stores, service-based businesses, landing pages, membership sites, and much more. We offer industry-specific templates for restaurants, real estate, fitness, fashion, consulting, and hundreds of other niches. Whether you're a freelancer, small business owner, or entrepreneur, we have the tools you need to create your perfect website.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
+                        <h3 class="text-lg font-bold text-white">How much does Upflex Digital cost?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6">
+                        <p class="text-gray-400 leading-relaxed">
+                            We offer flexible pricing plans to suit every budget. Our Starter plan is perfect for individuals and small projects, while our Professional and Business plans include advanced features like e-commerce, analytics, and priority support. All plans include hosting, SSL certificates, and unlimited bandwidth. We also offer a free trial so you can test our platform before committing. Visit our pricing page for detailed information about each plan and to find the perfect fit for your needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700 transition-colors duration-300 focus:outline-none">
+                        <h3 class="text-lg font-bold text-white">Is my website mobile-friendly and SEO-optimized?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6">
+                        <p class="text-gray-400 leading-relaxed">
+                            Yes! Every website built on Upflex Digital is automatically mobile-responsive and optimized for search engines. Our platform follows the latest SEO best practices, including fast loading times, clean code, mobile optimization, and built-in SEO tools. We also provide analytics to help you track your performance and make improvements. Your website will look perfect on all devices and be ready to rank well in search results from day one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=500&fit=crop" alt="CTA background" class="w-full h-full object-cover opacity-20">
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-90"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Ready to Get Started?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of successful businesses using Upflex Digital. Build your website today and start seeing results tomorrow.
+            </p>
+            <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="button-hover inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                Start Your Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                    Get In Touch
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Have questions? Our team is here to help you succeed
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Card 1 -->
+                <div class="hover-scale bg-gray-800 border border-gray-700 rounded-xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:border-cyan-500">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-envelope text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Email</h3>
+                    <p class="text-gray-400">
+                        <a href="mailto:info@upflexdigital.com" class="hover:text-cyan-400 transition-colors duration-300">info@upflexdigital.com</a>
+                    </p>
+                </div>
+                
+                <!-- Contact Card 2 -->
+                <div class="hover-scale bg-gray-800 border border-gray-700 rounded-xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:border-cyan-500">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-globe text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Website</h3>
+                    <p class="text-gray-400">
+                        <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors duration-300">upflexdigital.com</a>
+                    </p>
+                </div>
+                
+                <!-- Contact Card 3 -->
+                <div class="hover-scale bg-gray-800 border border-gray-700 rounded-xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:border-cyan-500">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mb-6">
+                        <i class="fas fa-headset text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Support</h3>
+                    <p class="text-gray-400">
+                        24/7 Customer Support Available
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Upflex Digital</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Empowering businesses with innovative website building solutions. Create stunning websites without code.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Benefits</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">About</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">FAQ</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Terms of Service</a></li>
+                        <li><a href="mailto:info@upflexdigital.com" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="year"></span> Upflex Digital. All rights reserved. Built with passion for entrepreneurs.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('i').style.transform = 'rotate(0deg)';
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+                button.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll behavior for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
