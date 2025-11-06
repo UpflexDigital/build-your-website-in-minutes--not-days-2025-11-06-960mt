@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to build a professional website in minutes without coding. Comprehensive guide to AI-powered website builders and best practices for online success.">
+    <meta name="keywords" content="website builder, AI website builder, no code, web design, website creation, how to build a website">
+    <meta name="author" content="Upflex Digital">
+    <meta property="og:title" content="How to Build a Professional Website in Minutes - Upflex Digital">
+    <meta property="og:description" content="Complete guide to building professional websites without coding knowledge or technical skills">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://upflexdigital.com/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>How to Build a Professional Website in Minutes - AI Website Builder Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .button-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .blog-content p {
+            color: #d1d5db;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content ul {
+            list-style: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: #d1d5db;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content strong {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center h-20">
+                <div class="flex items-center justify-between w-full">
+                    <a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Upflex
+                    </a>
+                    <a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt" class="nav-link text-gray-300 hover:text-white text-sm font-medium">
+                        ← Back
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Content Section -->
+    <section class="pt-32 pb-24 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Blog Header -->
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                    How to Build a Professional Website in Minutes Without Coding
+                </h1>
+                <div class="flex items-center text-gray-400 space-x-4 mb-8">
+                    <span class="text-sm">By Upflex Digital</span>
+                    <span class="text-sm">•</span>
+                    <span class="text-sm" id="blog-date"></span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=1200&h=675&fit=crop" alt="Professional website design displayed on multiple devices showing responsive design and modern interface" class="w-full rounded-lg shadow-lg mb-12 object-cover">
+
+            <!-- Blog Content -->
+            <div class="blog-content bg-gray-800 bg-opacity-50 rounded-xl p-8 md:p-12 border border-gray-700">
+                <h2>Introduction: The Website Revolution</h2>
+                <p>
+                    In today's digital landscape, having a professional website is no longer a luxury—it's a necessity. Whether you're a freelancer, small business owner, entrepreneur, or creative professional, your online presence can make or break your success. However, the traditional path to website creation has always been fraught with obstacles: expensive developers, steep learning curves, and months of development time.
+                </p>
+                <p>
+                    The good news? That era is behind us. With modern AI-powered website builders, you can now create a stunning, professional website in minutes—not weeks or months. No coding knowledge required. No expensive developers to hire. No technical headaches. Just you, an intuitive builder, and unlimited possibilities.
+                </p>
+                <p>
+                    In this comprehensive guide, we'll walk you through everything you need to know about building a professional website quickly and efficiently using AI-powered tools. By the end, you'll understand exactly how to get your business online and start attracting customers today.
+                </p>
+
+                <h2>Why Traditional Web Development is Outdated</h2>
+                <p>
+                    For decades, building a website meant hiring an expensive web development agency or learning to code yourself. Both options presented significant challenges:
+                </p>
+                <ul>
+                    <li><strong>High Costs:</strong> Professional web developers charge $5,000 to $50,000+ for a basic business website. For startups and small businesses, this is simply prohibitive.</li>
+                    <li><strong>Long Timelines:</strong> Traditional development takes weeks or months. By the time your website launches, market conditions may have changed.</li>
+                    <li><strong>Steep Learning Curve:</strong> Learning HTML, CSS, JavaScript, and backend technologies takes years of dedicated study.</li>
+                    <li><strong>Limited Control:</strong> Once you hire a developer, you're dependent on them for every change or update.</li>
+                    <li><strong>Maintenance Headaches:</strong> Updates, security patches, and hosting management create ongoing complications.</li>
+                </ul>
+                <p>
+                    These barriers have prevented countless talented entrepreneurs and business owners from establishing their online presence. Fortunately, AI-powered website builders have completely changed the game.
+                </p>
+
+                <h2>The Rise of AI-Powered Website Builders</h2>
+                <p>
+                    AI-powered website builders represent a paradigm shift in web design and development. These platforms combine intelligent automation, pre-built templates, and intuitive interfaces to democratize web creation. Here's what makes them revolutionary:
+                </p>
+                <ul>
+                    <li><strong>Artificial Intelligence:</strong> AI analyzes your industry and preferences to suggest designs and layouts perfectly suited to your business.</li>
+                    <li><strong>Drag-and-Drop Simplicity:</strong> Build your site by dragging elements around—no coding required.</li>
+                    <li><strong>Professional Templates:</strong> Choose from hundreds of industry-specific, professionally designed templates.</li>
+                    <li><strong>Instant Publishing:</strong> Launch your website immediately without worrying about hosting or technical setup.</li>
+                    <li><strong>Mobile Optimization:</strong> Every site is automatically optimized for smartphones, tablets, and desktops.</li>
+                    <li><strong>Built-in SEO:</strong> Your website is automatically optimized for search engines.</li>
+                </ul>
+                <p>
+                    The result? What used to take months and cost thousands now takes minutes and costs a fraction of the price. This democratization of web design has empowered millions of entrepreneurs to build their dreams online.
+                </p>
+
+                <h2>Step-by-Step: Building Your Website in Minutes</h2>
+                <p>
+                    Ready to build your professional website? Follow these simple steps to get online quickly:
+                </p>
+
+                <h3>Step 1: Choose Your Platform</h3>
+                <p>
+                    Start by selecting an AI-powered website builder that aligns with your needs. Look for platforms that offer:
+                </p>
+                <ul>
+                    <li>Industry-specific templates for your niche</li>
+                    <li>Intuitive drag-and-drop editors</li>
+                    <li>Mobile responsiveness built-in</li>
+                    <li>SEO optimization tools</li>
+                    <li>Analytics and reporting features</li>
+                    <li>Excellent customer support</li>
+                    <li>Transparent, affordable pricing</li>
+                </ul>
+                <p>
+                    Take advantage of free trials to test multiple platforms before committing. Most quality builders offer 14-30 day free trials with full feature access.
+                </p>
+
+                <h3>Step 2: Select Your Template</h3>
+                <p>
+                    Once you've chosen your platform, browse their template library. Modern website builders offer templates categorized by industry, business type, and purpose. Whether you need a portfolio site, e-commerce store, service business landing page, or blog, you'll find professionally designed options ready to customize.
+                </p>
+                <p>
+                    Don't worry about finding the perfect template immediately. You can change templates later if needed. The important thing is starting with a solid foundation that matches your general vision.
+                </p>
+
+                <h3>Step 3: Customize Your Content</h3>
+                <p>
+                    With your template selected, begin personalizing it with your content. Replace placeholder text with your business information, company description, services or products, and value proposition. Add your logo, photos, and branding colors. Most builders let you edit content directly by clicking on elements—no special skills required.
+                </p>
+                <p>
+                    This is where your website begins to truly reflect your brand. Take time to craft compelling copy that speaks to your target audience and clearly communicates what makes your business unique.
+                </p>
+
+                <h3>Step 4: Add Essential Pages</h3>
+                <p>
+                    Every professional website needs certain core pages. Most templates include these, but ensure you have:
+                </p>
+                <ul>
+                    <li><strong>Home Page:</strong> Your website's first impression</li>
+                    <li><strong>About Page:</strong> Tell your story and build trust</li>
+                    <li><strong>Services/Products Page:</strong> Showcase what you offer</li>
+                    <li><strong>Contact Page:</strong> Make it easy for visitors to reach you</li>
+                    <li><strong>Blog (Optional):</strong> Share valuable content and improve SEO</li>
+                </ul>
+                <p>
+                    Each page should be clear, concise, and focused on providing value to your visitors. Remember, your website is a sales tool—every page should guide visitors toward taking action.
+                </p>
+
+                <h3>Step 5: Optimize for Mobile</h3>
+                <p>
+                    With over 60% of web traffic coming from mobile devices, mobile optimization is non-negotiable. Fortunately, AI-powered builders handle this automatically. However, take time to preview your site on various devices and ensure everything looks perfect. Check that buttons are easily tappable, text is readable, and images display correctly on small screens.
+                </p>
+
+                <h3>Step 6: Set Up Analytics and SEO</h3>
+                <p>
+                    Before launching, configure your analytics and SEO settings. Connect Google Analytics to track visitor behavior, traffic sources, and conversions. Set up your SEO basics including meta descriptions, keywords, and site structure. Most builders provide SEO checklists to guide you through this process.
+                </p>
+
+                <h3>Step 7: Launch and Promote</h3>
+                <p>
+                    Once you're satisfied with your website, it's time to launch! Most builders make this as simple as clicking a "Publish" button. Your site goes live immediately. Now begins the important work of promoting your website through social media, email marketing, content marketing, and other channels to drive traffic and generate leads.
+                </p>
+
+                <h2>Key Features of Modern Website Builders</h2>
+                <p>
+                    Today's AI-powered website builders come packed with features that would have cost thousands just a few years ago. Here are the most valuable ones:
+                </p>
+
+                <h3>Drag-and-Drop Editor</h3>
+                <p>
+                    The cornerstone of modern builders is the intuitive drag-and-drop editor. Simply click and drag elements where you want them. No coding, no complexity. This visual approach makes web design accessible to anyone.
+                </p>
+
+                <h3>Mobile Responsiveness</h3>
+                <p>
+                    Your website automatically adapts to any screen size. What looks great on desktop automatically reformats for tablets and phones. This isn't optional anymore—it's essential.
+                </p>
+
+                <h3>SEO Optimization</h3>
+                <p>
+                    Built-in SEO tools help your website rank in search results. Features include customizable meta tags, XML sitemaps, mobile optimization, fast loading speeds, and structured data markup. Your website is search-engine-ready from day one.
+                </p>
+
+                <h3>E-Commerce Integration</h3>
+                <p>
+                    If you sell products, modern builders include e-commerce features like product catalogs, shopping carts, payment processing, and inventory management. Sell directly from your website without technical complications.
+                </p>
+
+                <h3>Analytics Dashboard</h3>
+                <p>
+                    Understand your visitors with built-in analytics. Track page views, bounce rates, conversion rates, traffic sources, and visitor behavior. Make data-driven decisions to improve your website's performance.
+                </p>
+
+                <h3>Email Marketing Integration</h3>
+                <p>
+                    Connect your email marketing tools to capture leads and build your subscriber list. Most builders integrate with popular platforms like Mailchimp, ConvertKit, and HubSpot.
+                </p>
+
+                <h3>Social Media Integration</h3>
+                <p>
+                    Embed social feeds, share buttons, and social proof elements to increase engagement and build community around your brand.
+                </p>
+
+                <h2>Common Mistakes to Avoid</h2>
+                <p>
+                    As you build your website, watch out for these common pitfalls:
+                </p>
+                <ul>
+                    <li><strong>Cluttered Design:</strong> Less is more. Avoid overwhelming visitors with too much information or too many colors.</li>
+                    <li><strong>Poor Navigation:</strong> Make it obvious how to find information. Visitors should understand your site structure within seconds.</li>
+                    <li><strong>Slow Loading Times:</strong> Optimize images and minimize unnecessary elements. Slow sites drive visitors away.</li>
+                    <li><strong>Weak Call-to-Action:</strong> Every page should guide visitors toward a specific action. Make it clear what you want them to do.</li>
+                    <li><strong>Outdated Content:</strong> Keep your website fresh with regular updates. Outdated information damages credibility.</li>
+                    <li><strong>Poor Mobile Experience:</strong> Always test on mobile devices. A bad mobile experience will hurt your rankings and conversions.</li>
+                    <li><strong>Ignoring SEO:</strong> Don't launch without basic SEO optimization. You want visitors to find you.</li>
+                </ul>
+
+                <h2>Maximizing Your Website's Potential</h2>
+                <p>
+                    Building your website is just the beginning. To truly maximize its potential, consider these strategies:
+                </p>
+
+                <h3>Create Valuable Content</h3>
+                <p>
+                    Start a blog and publish regular, high-quality content that addresses your audience's pain points. This builds authority, improves SEO, and keeps visitors coming back.
+                </p>
+
+                <h3>Optimize for Conversions</h3>
+                <p>
+                    Use analytics to identify which pages perform best. A/B test different headlines, images, and call-to-action buttons to continuously improve conversion rates.
+                </p>
+
+                <h3>Build Your Email List</h3>
+                <p>
+                    Your email list is your most valuable asset. Offer something valuable (free guide, discount, webinar) in exchange for email addresses. Then nurture these leads with regular, helpful communication.
+                </p>
+
+                <h3>Leverage Social Proof</h3>
+                <p>
+                    Display testimonials, case studies, reviews, and social media feeds to build trust. People are more likely to do business with you when they see others have had positive experiences.
+                </p>
+
+                <h3>Stay Mobile-First</h3>
+                <p>
+                    Design with mobile users in mind. Over half your traffic will come from mobile devices, so optimize accordingly.
+                </p>
+
+                <h2>The Financial Impact</h2>
+                <p>
+                    Let's talk numbers. Building a website with AI-powered builders versus traditional methods shows a dramatic difference:
+                </p>
+                <ul>
+                    <li><strong>Traditional Web Developer:</strong> $5,000-$50,000+ upfront, weeks or months of development time</li>
+                    <li><strong>AI Website Builder:</strong> $50-$300/month, minutes to launch, full control over updates</li>
+                </ul>
+                <p>
+                    That's not just a cost savings—it's a game-changer for entrepreneurs. You can get online, start generating leads, and validate your business idea without a massive financial commitment.
+                </p>
+
+                <h2>Future-Proofing Your Website</h2>
+                <p>
+                    The web evolves constantly. Ensure your website stays current by:
+                </p>
+                <ul>
+                    <li>Regularly updating content and images</li>
+                    <li>Keeping your platform and plugins up to date</li>
+                    <li>Monitoring analytics and making data-driven improvements</li>
+                    <li>Staying informed about web design trends</li>
+                    <li>Testing your website regularly on different devices and browsers</li>
+                    <li>Backing up your website regularly</li>
+                </ul>
+
+                <h2>Conclusion: Your Online Journey Starts Now</h2>
+                <p>
+                    Building a professional website no longer requires coding skills, expensive developers, or months of development time. With modern AI-powered website builders, anyone can create a stunning, functional website in minutes.
+                </p>
+                <p>
+                    The barrier to entry has been demolished. The only question now is: what are you waiting for? Your competitors are already online. Your customers are searching for you. Your business is ready to grow.
+                </p>
+                <p>
+                    Take action today. Choose a platform, select a template, customize your content, and launch your website. The world is waiting to discover what you have to offer. Your professional online presence is just minutes away.
+                </p>
+                <p>
+                    The future of business is online. Make sure you're part of it.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=500&fit=crop" alt="CTA background" class="w-full h-full object-cover opacity-20">
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-90"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Ready to Build Your Website?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Stop waiting. Start building. Your professional website is just minutes away. Join thousands of successful businesses already using AI-powered tools.
+            </p>
+            <a href="https://upflexdigital.com/" target="_blank" rel="noopener noreferrer" class="button-hover inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                Start Your Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Upflex Digital</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Empowering businesses with innovative website building solutions. Create stunning websites without code.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#home" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#features" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Features</a></li>
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#benefits" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Benefits</a></li>
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#about" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">About</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#testimonials" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Testimonials</a></li>
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#faq" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">FAQ</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Blog</a></li>
+                        <li><a href="https://UpflexDigital.github.io/build-your-website-in-minutes--not-days-2025-11-06-960mt#contact" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Terms of Service</a></li>
+                        <li><a href="mailto:info@upflexdigital.com" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="year"></span> Upflex Digital. All rights reserved. Built with passion for entrepreneurs.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('i').style.transform = 'rotate(0deg)';
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+                button.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Set blog date
+        const blogDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('blog-date').textContent = blogDate.toLocaleDateString('en-US', options);
+
+        // Smooth scroll behavior for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
